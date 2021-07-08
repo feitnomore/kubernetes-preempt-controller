@@ -22,7 +22,7 @@ def loadConfig():
         return True
         
     except Exception as e:
-        logutil.printException(e)
+        logutil.printMessage("EXCEPTION - Kubeclient - " + str(e))
         return False
 
 # Performs the API Connection
@@ -31,5 +31,5 @@ def connectApi():
         globalholders.coreApi = client.CoreV1Api()
         return True
     except Exception as e:
-        logutil.printException(e)
+        logutil.printMesage("EXCEPTION - Kubeclient - " + str(e))
         return False

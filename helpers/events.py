@@ -32,9 +32,8 @@ def launchHandler():
                     except Exception as e:
                         # Pod probably lost
                         if ( str(e.reason) != "Not Found"):
-                            logutil.printMessage("ERROR - " + str(e.status) + " "+ e.reason)
+                            logutil.printMessage("EXCEPTION PodDeletion - " + str(e.status) + " " + e.reason)
 
     except Exception as e:
-        logutil.printMessage(e)
-        logutil.printMessage("Event Handler Exception: " + str(e.status) + " " + e.reason)
+        logutil.printMessage("EXCEPTION Watcher - " + str(e.status) + " " + e.reason)
 

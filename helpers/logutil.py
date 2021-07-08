@@ -1,6 +1,6 @@
 # logutil - Main Log Handler
 # Helpers to print our status to the stdout, as well
-# as saving termination-log.
+# as the time it happened.
 #
 # Marcelo Feitoza Parisi (marcelo@feitoza.com.br)
 
