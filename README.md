@@ -14,8 +14,8 @@ The Controller watches for `Events` of type `Pod`.
 
 ## HOW TO INSTALL IT
 
-The details below assume you are creating a `ServiceAccount`, a `ClusterRole`, a `ClusterRoleBinding`, a `ConfigMap`, a `Deployment` and a `Pod`, all on the *kube-system* `Namespace`. Please, adjust as necessary.  
-*Note:* We are adding `patch, get, watch, list, update, delete` as verbs on `Pods` for the `ClusterRole` we are creating.
+The details below assume you are creating a `ServiceAccount`, a `ClusterRole`, a `ClusterRoleBinding`, a `Deployment` and a `Pod`, all on the *kube-system* `Namespace`. Please, adjust as necessary.  
+*Note:* We are adding `patch, get, watch, list, update, delete` as verbs on `Pods` as well as `get, watch, list` verbs on `Nodes` for the `ClusterRole` we are creating.
 
 ### Create a Service Account
 ```sh
