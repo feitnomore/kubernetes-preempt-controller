@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubernetes-preempt-controller
+  namespace: kube-system
+  labels:
+    k8s-app: kubernetes-preempt-controller
+spec:
+  selector:
+    matchLabels:
+      k8s-app: kubernetes-preempt-controller
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        k8s-app: kubernetes-preempt-controller
+    spec:
+      containers:
+        - name: kubernetes-preempt-controller
+          image: feitnomore/kubernetes-preempt-controller:latest
+          imagePullPolicy: Always
+      serviceAccountName: kubernetes-preempt-controller
+      restartPolicy: Always
+      

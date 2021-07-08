@@ -1,0 +1,11 @@
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1 
+metadata:
+  name: kubernetes-preempt-controller 
+rules:
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["patch", "get", "watch", "list", "update", "delete"]
+  - apiGourps: [""]
+    resources: ["nodes"]
+    verbs: ["get","watch","list"]
