@@ -19,7 +19,7 @@ The details below assume you are creating a `ServiceAccount`, a `ClusterRole`, a
 
 ### Create a Service Account
 ```sh
-$ kubectl apply -f https://raw.githubusercontent.com/feitnomore/kubernetes-prempt-controller/master/examples/kubernetes-preempt-controller_ServiceAccount.yaml
+$ kubectl apply -f https://raw.githubusercontent.com/feitnomore/kubernetes-preempt-controller/master/examples/kubernetes-preempt-controller_ServiceAccount.yaml
 ```
 ### Create the Cluster Role
 ```sh
