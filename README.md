@@ -47,7 +47,7 @@ kubectl logs $PVM_CONTROLLER -n kube-system
 ## REFERENCES AND IDEAS
 
 1. [Kubernetes](https://kubernetes.io/)
-2. [Python 2.7](https://www.python.org/)
+2. [Python 3.9](https://www.python.org/)
 3. [Kubernetes Python Client](https://github.com/kubernetes-client/python)
 4. [Docker Hub](https://hub.docker.com/r/feitnomore/kubernetes-preempt-controller/)
 
