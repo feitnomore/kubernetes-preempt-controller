@@ -14,8 +14,15 @@ The Controller watches for `Events` of type `Pod`.
 
 ## HOW TO INSTALL IT
 
+There is a bundled yaml that creates a `ServiceAccount`, a `ClusterRole`, a `ClusterRoleBinding` and a `Deployment` on the *kube-system* `Namespace`.
+```sh
+$ kubectl apply -f https://raw.githubusercontent.com/feitnomore/kubernetes-preempt-controller/master/examples/kubernetes-preempt-controller_bundled.yaml
+```
+
+## HOW TO INSTALL IT (DETAILED)
+
 The details below assume you are creating a `ServiceAccount`, a `ClusterRole`, a `ClusterRoleBinding`, a `Deployment` and a `Pod`, all on the *kube-system* `Namespace`. Please, adjust as necessary.  
-*Note:* We are adding `patch, get, watch, list, update, delete` as verbs on `Pods` as well as `get, watch, list` verbs on `Nodes` for the `ClusterRole` we are creating.
+*Note:* We are adding `patch, get, watch, list, update, delete` as verbs on `Pods` for the `ClusterRole` we are creating.
 
 ### Create a Service Account
 ```sh

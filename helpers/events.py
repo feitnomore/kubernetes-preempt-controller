@@ -24,7 +24,6 @@ def launchHandler():
                      my_pod.status.phase == "Failed" and
                      my_pod.spec.node_name is not None
                     ):
-                    my_node = globalholders.coreApi.read_node(my_pod.spec.node_name)
                     message = "DELETING - pod: " + str(my_pod.metadata.name) + " namespace: " + str(my_pod.metadata.namespace) + " node: " + str(my_pod.spec.node_name)
                     logutil.printMessage(message)
                     try: 

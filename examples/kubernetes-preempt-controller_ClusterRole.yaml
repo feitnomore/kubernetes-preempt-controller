@@ -6,6 +6,3 @@ rules:
   - apiGroups: [""]
     resources: ["pods"]
     verbs: ["patch", "get", "watch", "list", "update", "delete"]
-  - apiGourps: [""]
-    resources: ["nodes"]
-    verbs: ["get","watch","list"]
